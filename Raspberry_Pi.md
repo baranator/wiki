@@ -17,7 +17,7 @@ If you experience distortion using the 3.5mm analogue output:
 
     audio_pwm_mode=2
 ## Serial Console
-Due to shared usage of the hardware serial device for the internal bluetooth device of the Raspberry Pi 3 establishing a serial console via its UART-GPIOs might not work out of the box. To fix this configure the Raspberry Pi to use a software serial for ist bluetooth chip by adding the following line to `/boot/config,txt`:
+Due to shared usage of the hardware serial device for the internal bluetooth device of the Raspberry Pi 3 establishing a serial console via its UART-GPIOs might not work out of the box. To fix this, configure the Raspberry Pi to use a software serial for its bluetooth chip by adding the following line to `/boot/config,txt`:
 
 ```
 dtoverlay=pi3-miniuart-bt
