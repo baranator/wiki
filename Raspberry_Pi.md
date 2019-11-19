@@ -16,6 +16,12 @@ To force audio over HDMI, add this to `/boot/config.txt`:
 If you experience distortion using the 3.5mm analogue output:
 
     audio_pwm_mode=2
+## Serial Console
+Due to shared usage of the hardware serial device for the internal bluetooth device of the Raspberry Pi 3 establishing a serial console via its UART-GPIOs might not work out of the box. To fix this configure the Raspberry Pi to use a software serial for ist bluetooth chip by adding the following line to `/boot/config,txt`:
+
+```
+dtoverlay=pi3-miniuart-bt
+```
 
 ## Bluetooth
 
@@ -265,4 +271,5 @@ To use the GPIO/SPI pins as a regular non-root user (in group `tty`), add the fo
 * [RPi Config](http://elinux.org/RPiconfig) - Excellent source of info relating to under-the-hood tweaks.
 * [RPi vcgencmd usage](http://elinux.org/RPI_vcgencmd_usage) - Overview of firmware command vcgencmd.
 * [Arch Linux ARM on Raspberry Pi](http://archpi.dabase.com/) - A FAQ style site with hints and tips for running Arch Linux on the RPi
+* [Raspberry Arch Install](https://www.held-im-ruhestand.de/hardware/raspberry-arch.html) - Additional information for installing Arch Linux on a RPi
 
